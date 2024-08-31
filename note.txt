@@ -1,0 +1,29 @@
+typdefs : schema dari data
+
+resolver: menyambungkan data dengan database.
+misal books artinya fetch semua data buku
+fungsi untuk fetch ke database semua data buku bisa dilakukan di resolver
+
+// apollo server
+tidak perlu mendeskripsikan revolver akan return atribut apa (sudah otomatis bisa return atribut spesifik dari data yg diberi)
+
+// Parent, Argument, Context
+Args : ada pada body yg dikirim lewat POST
+contoh :
+query ExampleQuery($id : ID!, $bookId: ID!) {
+  author(id: $id) {
+    name
+  }
+  book(id: $bookId) {
+    title
+  }
+}
+dengan variable body(JSON) :
+{
+  "id": "1",
+  "bookId": "4",
+}
+
+Nodemon :
+npm install nodemon --save -dev
+nodemon [...] (isi dengan file yang ingin dijalankan)
